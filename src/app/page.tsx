@@ -13,8 +13,9 @@ import { api } from "../../convex/_generated/api";
 import { useUser } from "@clerk/nextjs";
 
 export default function Home() {
-  const organization = useOrganization();
-  const user = useUser();
+  const { organization } = useOrganization();
+  console.log(organization?.id);
+  // const user = useUser();
 
   // const orgId: string | undefined = undefined;
   // if (organization.isLoaded && user.isLoaded) {
